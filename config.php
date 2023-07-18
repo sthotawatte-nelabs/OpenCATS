@@ -37,10 +37,10 @@ if( !defined('LEGACY_ROOT') )
 }
 
 /* Database configuration. */
-define('DATABASE_USER', 'cats');
-define('DATABASE_PASS', 'password');
+define('DATABASE_USER', 'mjtlcadmin');
+define('DATABASE_PASS', 'F}!q6W<JK597@sK>(a=j');
 define('DATABASE_HOST', 'localhost');
-define('DATABASE_NAME', 'cats_dev');
+define('DATABASE_NAME', 'opencats');
 
 /* Authentication Configuration
  * Options are sql, ldap, sql+ldap
@@ -78,7 +78,7 @@ define('HTML2TEXT_PATH', "\\path\\to\\html2text");
  * one backslash (\). 'unrtf' can be found at:
  * http://www.gnu.org/software/unrtf/unrtf.html
  */
-define('UNRTF_PATH', "\\path\\to\unrtf");
+define('UNRTF_PATH', "\\path\\to\\unrtf");
 
 /* Temporary directory. Set this to a directory that is writable by the
  * web server. The default should be fine for most systems. Remember to
@@ -177,7 +177,7 @@ define('FORGOT_PASSWORD_BODY',      'You recently requested that your OpenCATS: 
 define('ENABLE_DEMO_MODE', false);
 
 /* Offset to GMT Time. */
-define('OFFSET_GMT', 2);
+define('OFFSET_GMT', -5);
 
 /* Should we enforce only one session per user (excluding demo)? */
 define('ENABLE_SINGLE_SESSION', false);
@@ -205,7 +205,7 @@ define('DEMO_PASSWORD',  'john99');
  * 2: Sendmail
  * 3: SMTP
  */
-define('MAIL_MAILER', 3);
+define('MAIL_MAILER', 1);
 
 /* Sendmail Settings. You don't need to worry about this unless MAIL_MAILER
  * is set to 2.
@@ -218,7 +218,7 @@ define('MAIL_SENDMAIL_PATH', "/usr/sbin/sendmail");
  */
 define('MAIL_SMTP_HOST', "localhost");
 define('MAIL_SMTP_PORT', 587);
-define('MAIL_SMTP_AUTH', true);
+define('MAIL_SMTP_AUTH', false);
 define('MAIL_SMTP_USER', "user");
 define('MAIL_SMTP_PASS', "password");
 //Options: '', 'ssl' or 'tls'
@@ -259,7 +259,7 @@ define('CACHE_MODULES', false);
  * by distance from a zipcode.
  */
 
-define('US_ZIPS_ENABLED', false);
+define('US_ZIPS_ENABLED', true);
 
 /* LDAP Configuration
  */
@@ -350,8 +350,8 @@ class ACL_SETUP {
         'candidate' => array('Candidate', 'candidate', 'This is a candidate.', ACCESS_LEVEL_SA, ACCESS_LEVEL_READ),
         'demo' => array('Demo', 'demo', 'This is a demo user.', ACCESS_LEVEL_SA, ACCESS_LEVEL_READ)
     );
-   
-    // defining access levels different from the default access level    
+
+    // defining access levels different from the default access level
     public static $ACCESS_LEVEL_MAP = array(
         'candidate' => array(
         ),
@@ -367,7 +367,7 @@ class ACL_SETUP {
 };
 */
 
-/* All possible secure object names 
+/* All possible secure object names
             'candidates.history'
             'settings.administration'
             'joborders.editRating'

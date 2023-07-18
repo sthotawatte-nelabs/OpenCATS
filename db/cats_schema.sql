@@ -164,8 +164,8 @@ CREATE TABLE `candidate` (
   `first_name` varchar(64) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
   `middle_name` varchar(32) COLLATE utf8_unicode_ci DEFAULT NULL,
   `phone_home` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `phone_cell` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `phone_work` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  /*`phone_cell` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `phone_work` varchar(40) COLLATE utf8_unicode_ci DEFAULT NULL,*/
   `address` text COLLATE utf8_unicode_ci,
   `city` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
   `state` varchar(64) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -198,8 +198,8 @@ CREATE TABLE `candidate` (
   KEY `IDX_first_name` (`first_name`),
   KEY `IDX_last_name` (`last_name`),
   KEY `IDX_phone_home` (`phone_home`),
-  KEY `IDX_phone_cell` (`phone_cell`),
-  KEY `IDX_phone_work` (`phone_work`),
+  /*KEY `IDX_phone_cell` (`phone_cell`),
+  KEY `IDX_phone_work` (`phone_work`),*/
   KEY `IDX_key_skills` (`key_skills`(255)),
   KEY `IDX_entered_by` (`entered_by`),
   KEY `IDX_owner` (`owner`),

@@ -90,7 +90,7 @@ function stripslashes_deep($value)
 }
 
 /* Make sure we aren't getting screwed over by magic quotes. */
-if (get_magic_quotes_runtime())
+/*if (get_magic_quotes_runtime())
 {
     if (function_exists('set_magic_quotes_runtime')) {
         set_magic_quotes_runtime(0);
@@ -107,7 +107,7 @@ if (get_magic_quotes_gpc())
     $_POST    = ArrayUtility::arrayMapKeys('stripslashes_deep', $_POST);
     $_REQUEST = ArrayUtility::arrayMapKeys('stripslashes_deep', $_REQUEST);
 }
-
+*/
 /* Objects can't be stored in the session if session.auto_start is enabled. */
 if (ini_get('session.auto_start') !== '0' &&
     ini_get('session.auto_start') !== 'Off')
